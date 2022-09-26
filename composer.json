@@ -1,6 +1,6 @@
 {
-    "name": "froala/nova-froala-field",
-    "description": "A Laravel Nova Froala WYSIWYG Editor Field.",
+    "name": "yehiaAbdullah/nova-froala-field",
+    "description": "A Laravel Nova Froala WYSIWYG Editor Field with some changes to handle images and files in case flexible attribute.",
     "keywords": [
         "laravel",
         "nova",
@@ -9,7 +9,7 @@
         "froala",
         "editor"
     ],
-    "homepage": "https://github.com/froala/nova-froala-field",
+    "homepage": "https://github.com/yahiaAbdullah/nova-froala-field",
     "license": "MIT",
     "authors": [
         {
