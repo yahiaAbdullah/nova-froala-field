@@ -1,5 +1,5 @@
 {
-    "name": "yehiaAbdullah/nova-froala-field",
+    "name": "yehia-abdullah/nova-froala-field",
     "description": "A Laravel Nova Froala WYSIWYG Editor Field with some changes to handle images and files in case flexible attribute.",
     "keywords": [
         "laravel",
