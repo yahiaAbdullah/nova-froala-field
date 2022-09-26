@@ -2,6 +2,7 @@
 
 namespace Froala\NovaFroalaField\Http\Controllers;
 
+use Froala\NovaFroalaField\Froala;
 use Illuminate\Routing\Controller;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
@@ -18,8 +19,13 @@ class FroalaUploadController extends Controller
         $field = $request->newResource()
             ->availableFields($request)
             ->findFieldByAttribute($request->field, function () {
-                abort(404);
+                // abort(404);
             });
+
+
+        if (!($field instanceof Froala)) {
+            $field = Froala::make('Content', 'content')->withFiles('public')->rules('required')->hideFromIndex();
+        }
 
         return response()->json(['link' => call_user_func(
             $field->attachCallback,

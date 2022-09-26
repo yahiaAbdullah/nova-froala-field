@@ -47,7 +47,7 @@ class PendingAttachment extends Model
     {
         Attachment::create([
             'attachable_type' => get_class($model),
-            'attachable_id' => $model->getKey(),
+            'attachable_id' => method_exists($model, "getKey") ? $model->getKey() : rand(),
             'attachment' => $this->attachment,
             'disk' => $field->disk,
             'url' => Storage::disk($field->disk)->url($this->attachment),
